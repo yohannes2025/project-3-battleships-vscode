@@ -32,6 +32,7 @@ The deployed project live link is [HERE](https://portfolio-3-d66e66723f07.heroku
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
 - [Updated Project in Response to the Assessment Result](#Updated-Project-in-Response-to-the-Assessment-Result)
+- [How to run the project on Heroku](#How-to-run-the-project-on-Heroku)
 
 ## Introduction
 
@@ -375,5 +376,11 @@ The following bugs are tracked and handled, invalid input, out-of-bounds cooedin
 - **PEP 8 Compliance**: The code has been reviewed and passes through a linter with no significant issues, ensuring adherence to Python's coding standards.
 - **Input Validation**: The game includes mechanisms to handle empty or invalid input data effectively, prompting users to provide valid responses.
 - **Error Handling**: Exception handling is implemented throughout the code to optimize the user experience, ensuring that the game remains robust and user-friendly.
+
+### How to run the project on Heroku
+- open project-3-battleships-vscode
+- click "more"on the right top corner
+- then click "Run console" 
+- then on the "heroku run" command line type "python3 run.py"
 
 
