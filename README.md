@@ -379,8 +379,8 @@ The following bugs are tracked and handled, invalid input, out-of-bounds cooedin
 
 ### How to run the project on Heroku
 - open project-3-battleships-vscode
-- click "more"on the right top corner
+- click "more" on the right top corner
 - then click "Run console" 
-- then on the "heroku run" command line type "python3 run.py"
+- then on the "heroku run" command line type "python3 run.py" press enter
 
 
