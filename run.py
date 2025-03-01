@@ -98,10 +98,14 @@ def populate_board_player(board):
                     break
                 else:
                     print(
-                        "Invalid coordinates or location already occupied. Try again.")
+                        "Invalid coordinates or location already occupied. "
+                        "Try again."
+                        )
 
             except ValueError:
-                print("Invalid input. Please enter two numbers separated by a space.")
+                print("Invalid input. Please enter two numbers "
+                      "separated by a space."
+                      )
 
 
 def get_player_guess(board):
@@ -113,9 +117,12 @@ def get_player_guess(board):
             if 0 <= x < board.board_size and 0 <= y < board.board_size:
                 return x, y
             print(
-                f"Invalid input. Please enter a number between 0 and {board.board_size - 1} for both row and column.")
+                "Invalid input. Please enter a number between 0 and "
+                f"{board.board_size - 1} for both row and column."
+            )
         except ValueError:
-            print("Invalid input. Please enter two numbers separated by a space.")
+            print("Invalid input. Please enter two numbers "
+                  "separated by a space.")
 
 
 def get_computer_guess(board):
@@ -173,7 +180,9 @@ def play_game(computer_board, player_board):
         print("\nSummary:")
         print(f"Player guessed: ({player_x}, {player_y}) - {player_result}")
         print(
-            f"Computer guessed: ({computer_x}, {computer_y}) - {computer_result}")
+            f"Computer guessed: ({computer_x}, {computer_y}) - "
+            f"{computer_result}"
+        )
 
         print("_" * 35)
 
@@ -219,7 +228,10 @@ def get_valid_input(prompt, min_value, max_value):
                 return value
             else:
                 print(
-                    f"Input must be between {min_value} and {max_value}. Please try again.")
+                    f"Input must be between {min_value} and {max_value}. "
+                    "Please try again."
+                )
+
         except ValueError:
             print("Invalid input. Please enter an integer.")
         except EOFError:  # Catch EOFError
@@ -228,14 +240,20 @@ def get_valid_input(prompt, min_value, max_value):
 
 
 def is_valid_name(name):
-    """Check if the player's name starts with an alphabet and contains only letters and numbers."""
+    """
+    Check if the player's name starts with an alphabet
+    and contains only letters and numbers.
+    """
+
     if not name or not re.match(r"^[A-Za-z][A-Za-z0-9]*$", name):
         return False
-    # Changed from '>= 15' to '>' to ensure length is strictly less than or equal to 15
-    if len(name) < 1 or len(name) > 15:
+    if (
+        len(name) < 1
+        or len(name) > 15
+    ):  # Changed from '>= 15' to '>' to ensure length is strictly ≤ 15
+
         return False
     return True
-
 
 
 def new_game():
@@ -260,10 +278,18 @@ def new_game():
         player_name = input("Please enter your name: ").strip()
         if is_valid_name(player_name):
             break
-        print("Invalid name! Name must start with an alphabet, have no special characters, "
-              "and be between 1 and 14 characters long. Please try again.")
+        print(
+            "Invalid name! Name must start with an alphabet, have "
+            "no special characters, and be between 1 and 14 "
+            "characters long. Please try again."
+        )
 
-    computer_board = Board(board_size, num_ships, "Computer", "computer")
+    computer_board = Board(
+        board_size,
+        num_ships,
+        "Computer",
+        "computer"
+    )
     player_board = Board(board_size, num_ships, player_name, "player")
 
     # Players manually places their ships
