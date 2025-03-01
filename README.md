@@ -31,6 +31,7 @@ The deployed project live link is [HERE](https://portfolio-3-d66e66723f07.heroku
 - [Bugs](#bugs)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
+- [Updated Project in Response to the Assessment Result](#Updated-Project-in-Response-to-the-Assessment-Result)
 
 ## Introduction
 
@@ -367,5 +368,12 @@ The following bugs are tracked and handled, invalid input, out-of-bounds cooedin
 - Special thanks to Code Institute for giving me the opportunity to learn as a full stack software developer.
 - Code Institute tutor support for helping me to understsnd the Love Sandwiches sample project, which was the base for this project.
 - My mentor Jubril Akolade for teaching me the assessment criteria and general guide and followup of my portfolio project.
+
+### Updated Project in Response to the Assessment Result
+- The Ultimate Battleships project code is modified in response to the Assessment requirements feedback given by the he Code Institute Assessment Team.
+
+- **PEP 8 Compliance**: The code has been reviewed and passes through a linter with no significant issues, ensuring adherence to Python's coding standards.
+- **Input Validation**: The game includes mechanisms to handle empty or invalid input data effectively, prompting users to provide valid responses.
+- **Error Handling**: Exception handling is implemented throughout the code to optimize the user experience, ensuring that the game remains robust and user-friendly.
 
 
