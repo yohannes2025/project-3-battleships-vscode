@@ -264,17 +264,9 @@ def get_valid_input(prompt, min_value, max_value):
             exit(0)  # Exit the program or handle it as needed
 
 
-def is_valid_name(name):
-    """Check if the player's name meets the criteria."""
-    if not name.isalpha():
-        return False
-    if len(name) < 1 or len(name) >= 15:
-        return False
-    return True
-
 def new_game():
     """Initialize and start a new game."""
-    board_size = int(input("Enter board size: "))
+    board_size = get_valid_input("Enter board size (5-10): ", 5, 10)
     # User-defined ship count
     num_ships = int(input("Enter the number of ships: "))
     # Reset scores for a new game
