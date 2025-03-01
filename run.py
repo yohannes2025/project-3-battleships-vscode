@@ -1,4 +1,5 @@
 from random import randint
+import re
 
 # Global variable to keep track of scores
 scores = {"computer": 0, "player": 0}
@@ -227,12 +228,14 @@ def get_valid_input(prompt, min_value, max_value):
 
 
 def is_valid_name(name):
-    """Check if the player's name meets the criteria."""
-    if not name.isalpha():
+    """Check if the player's name starts with an alphabet and contains only letters and numbers."""
+    if not name or not re.match(r"^[A-Za-z][A-Za-z0-9]*$", name):
         return False
-    if len(name) < 1 or len(name) >= 15:
+    # Changed from '>= 15' to '>' to ensure length is strictly less than or equal to 15
+    if len(name) < 1 or len(name) > 15:
         return False
     return True
+
 
 
 def new_game():
